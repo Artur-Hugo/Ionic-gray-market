@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, MenuController, NavController } from 'ionic-angular';
 
+
+//anotação para que essa pagina seja referenciada em forma de string lá no app.componente.ts
 @IonicPage()
 @Component({
   selector: 'page-home',

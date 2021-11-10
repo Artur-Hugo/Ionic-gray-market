@@ -12,6 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
+  //rootPage dita a pagina para ser aberta quando iniciar
   rootPage: string = 'HomePage';
 
   pages: Array<{title: string, component: string}>;
