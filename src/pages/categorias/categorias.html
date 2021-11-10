@@ -9,5 +9,14 @@
 </ion-header>
 
 <ion-content padding>
-<p>Página de Categorias</p>
+  <ion-list>
+    <button ion-item *ngFor="let item of items">
+      <ion-thumbnail item-start>
+        <img src="{{bucketUrl}}/cat{{item.id}}.jpg">
+      </ion-thumbnail>
+      <h2> {{ item.nome }} </h2>
+      <p>Hayao Miyazaki - 1988</p>
+      <button ion-button clear item-end>View</button>
+    </button>
+  </ion-list>
 </ion-content>
