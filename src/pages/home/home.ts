@@ -34,15 +34,14 @@ export class HomePage {
   login(){
     this.auth.authenticate(this.creds)
       .subscribe( response => {
-        console.log(response.headers.get('Authorization'));
+        this.auth.successfullLogin(response.headers.get('Authorization'));
          //Navegar para a proxima tela
         this.navCtrl.setRoot('CategoriasPage');
 
       },
       error => {});
-   
-   
-    
   }
+
+
 
 }
