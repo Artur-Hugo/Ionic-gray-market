@@ -23,6 +23,16 @@ export class AuthService{
         )
     }
 
+    refreshToken(){
+        return this.http.post(
+            `${API_CONFIG.baseUrl}/auth/refresh_token`,
+            {},
+            {
+                observe: 'response',
+                responseType: 'text'
+            });
+    }
+
     successfullLogin(authorizationValue : string){
         //vai armazenar a partir no 7° Caracter
         let tok = authorizationValue.substring(7);
